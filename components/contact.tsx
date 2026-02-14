@@ -1,39 +1,39 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { MessageCircle, MapPin, Phone, Mail, Send } from 'lucide-react'
+import { useState } from "react";
+import { MessageCircle, MapPin, Phone, Mail, Send } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
+    name: "",
+    phone: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     // Form submission logic here
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setFormData({ name: '', phone: '', message: '' })
-    setTimeout(() => setSubmitted(false), 3000)
-  }
+    console.log("Form submitted:", formData);
+    setSubmitted(true);
+    setFormData({ name: "", phone: "", message: "" });
+    setTimeout(() => setSubmitted(false), 3000);
+  };
 
   const whatsappMessage = encodeURIComponent(
-    'Hi! I would like to book an appointment at Luxe Beauty Parlor.'
-  )
-  const whatsappURL = `https://wa.me/1234567890?text=${whatsappMessage}`
+    "Hi! I would like to book an appointment at Luxe Beauty Parlor.",
+  );
+  const whatsappURL = `https://wa.me/1234567890?text=${whatsappMessage}`;
 
   return (
     <section id="contact" className="py-20 px-4 bg-background">
@@ -43,7 +43,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your beauty routine? Reach out to us today and book your appointment.
+            Ready to transform your beauty routine? Reach out to us today and
+            book your appointment.
           </p>
         </div>
 
@@ -59,8 +60,9 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-foreground mb-1">Address</h3>
                   <p className="text-muted-foreground">
-                    123 Beauty Lane<br />
-                    New York, NY 10001
+                    Gulshan
+                    <br />
+                    Dhaka 10001
                   </p>
                 </div>
               </div>
@@ -75,8 +77,9 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-foreground mb-1">Phone</h3>
                   <p className="text-muted-foreground">
-                    +1 (555) 123-4567<br />
-                    Mon - Sun: 10am - 8pm
+                    +880 1234567
+                    <br />
+                    Sat - Thurs : 10am - 8pm
                   </p>
                 </div>
               </div>
@@ -91,7 +94,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-foreground mb-1">Email</h3>
                   <p className="text-muted-foreground">
-                    hello@luxebeauty.com<br />
+                    hello@luxebeauty.com
+                    <br />
                     Response time: 2 hours
                   </p>
                 </div>
@@ -113,8 +117,10 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h3>
-              
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Send us a Message
+              </h3>
+
               {submitted && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 font-medium">
                   ✓ Thank you for your message! We'll get back to you soon.
@@ -124,7 +130,10 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
-                  <label htmlFor="name" className="block text-foreground font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-foreground font-medium mb-2"
+                  >
                     Full Name
                   </label>
                   <input
@@ -141,7 +150,10 @@ export default function Contact() {
 
                 {/* Phone Input */}
                 <div>
-                  <label htmlFor="phone" className="block text-foreground font-medium mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-foreground font-medium mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -151,14 +163,17 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+880 1234567"
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
 
                 {/* Message Input */}
                 <div>
-                  <label htmlFor="message" className="block text-foreground font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-foreground font-medium mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -200,5 +215,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

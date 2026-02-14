@@ -1,34 +1,37 @@
-'use client'
+"use client";
 
-import { Star } from 'lucide-react'
+import { Star } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Mitchell',
-      role: 'Bride',
-      content: 'My bridal makeover was absolutely stunning! The makeup artist understood my vision perfectly and made me feel confident on my special day. Highly recommend!',
+      name: "Farhin Rahman",
+      role: "Bride",
+      content:
+        "My bridal makeover was absolutely stunning! The makeup artist understood my vision perfectly and made me feel confident on my special day. Highly recommend!",
       rating: 5,
-      image: '👰',
+      image: "👰",
     },
     {
       id: 2,
-      name: 'Emma Thompson',
-      role: 'Regular Customer',
-      content: 'I visit Luxe Beauty Parlor every month for my hair treatments. The staff is incredibly professional and the results are always impeccable. Best salon experience!',
+      name: "Fariha Imtiaz",
+      role: "Regular Customer",
+      content:
+        "I visit Luxe Beauty Parlor every month for my hair treatments. The staff is incredibly professional and the results are always impeccable. Best salon experience!",
       rating: 5,
-      image: '✨',
+      image: "✨",
     },
     {
       id: 3,
-      name: 'Jessica Davis',
-      role: 'Spa Enthusiast',
-      content: 'The spa treatments here are absolutely relaxing and rejuvenating. The therapists are skilled and the ambiance is perfect. I feel like a new person after every visit!',
+      name: "Sadia Akter",
+      role: "Spa Enthusiast",
+      content:
+        "The spa treatments here are absolutely relaxing and rejuvenating. The therapists are skilled and the ambiance is perfect. I feel like a new person after every visit!",
       rating: 5,
-      image: '💆',
+      image: "💆",
     },
-  ]
+  ];
 
   return (
     <section id="testimonials" className="py-20 px-4 bg-secondary/20">
@@ -38,7 +41,8 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of satisfied customers who have experienced the Luxe Beauty difference.
+            Join thousands of satisfied customers who have experienced the Luxe
+            Beauty difference.
           </p>
         </div>
 
@@ -83,5 +87,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

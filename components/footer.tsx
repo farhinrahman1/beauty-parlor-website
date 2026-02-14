@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Facebook, Instagram, Twitter, Mail } from 'lucide-react'
+import Link from "next/link";
+import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <footer className="bg-foreground text-background py-16 px-4">
@@ -34,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection("services")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   Services
@@ -42,7 +42,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('gallery')}
+                  onClick={() => scrollToSection("gallery")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   Gallery
@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={() => scrollToSection("about")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   About
@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection("contact")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   Contact
@@ -72,22 +72,34 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-background/70 hover:text-background transition-colors">
+                <Link
+                  href="#"
+                  className="text-background/70 hover:text-background transition-colors"
+                >
                   Hair Styling
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-background/70 hover:text-background transition-colors">
+                <Link
+                  href="#"
+                  className="text-background/70 hover:text-background transition-colors"
+                >
                   Facial Care
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-background/70 hover:text-background transition-colors">
+                <Link
+                  href="#"
+                  className="text-background/70 hover:text-background transition-colors"
+                >
                   Makeup Artistry
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-background/70 hover:text-background transition-colors">
+                <Link
+                  href="#"
+                  className="text-background/70 hover:text-background transition-colors"
+                >
                   Spa Treatment
                 </Link>
               </li>
@@ -124,8 +136,9 @@ export default function Footer() {
               </Link>
             </div>
             <p className="text-sm text-background/70">
-              hello@luxebeauty.com<br />
-              +1 (555) 123-4567
+              hello@luxebeauty.com
+              <br />
+              +880 123-4567
             </p>
           </div>
         </div>
@@ -136,15 +149,21 @@ export default function Footer() {
             © {currentYear} Luxe Beauty Parlor. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-background/70 hover:text-background transition-colors text-sm">
+            <Link
+              href="#"
+              className="text-background/70 hover:text-background transition-colors text-sm"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="text-background/70 hover:text-background transition-colors text-sm">
+            <Link
+              href="#"
+              className="text-background/70 hover:text-background transition-colors text-sm"
+            >
               Terms of Service
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,34 +1,38 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
+import number_1 from "./1.jpg";
+import number_2 from "./2.jpg";
+import number_3 from "./3.jpg";
+import number_4 from "./4.jpg";
 
 export default function Gallery() {
   const galleryImages = [
     {
       id: 1,
-      src: '/images/gallery-1.jpg',
-      alt: 'Professional Hair Styling Station',
-      title: 'Hair Styling',
+      src: number_1,
+      alt: "Professional Hair Styling Station",
+      title: "Hair Styling",
     },
     {
       id: 2,
-      src: '/images/gallery-2.jpg',
-      alt: 'Makeup Artist Workspace',
-      title: 'Makeup Artistry',
+      src: number_4,
+      alt: "Makeup Artist Workspace",
+      title: "Makeup Artistry",
     },
     {
       id: 3,
-      src: '/images/gallery-3.jpg',
-      alt: 'Spa Treatment Room',
-      title: 'Spa Treatments',
+      src: number_3,
+      alt: "Spa Treatment Room",
+      title: "Spa Treatments",
     },
     {
       id: 4,
-      src: '/images/gallery-4.jpg',
-      alt: 'Luxury Salon Lounge',
-      title: 'Salon Interior',
+      src: number_2,
+      alt: "Luxury Salon Lounge",
+      title: "Salon Interior",
     },
-  ]
+  ];
 
   return (
     <section id="gallery" className="py-20 px-4 bg-secondary/20">
@@ -38,7 +42,8 @@ export default function Gallery() {
             Our Salon Gallery
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Step into our world of luxury and beauty. Explore our state-of-the-art facilities and welcoming ambiance.
+            Step into our world of luxury and beauty. Explore our
+            state-of-the-art facilities and welcoming ambiance.
           </p>
         </div>
 
@@ -66,5 +71,5 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-  )
+  );
 }
